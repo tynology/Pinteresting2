@@ -1,4 +1,4 @@
-
+<%= render 'pages/home' unless user_signed_in? %>
 
 <h1>Listing Pins</h1>
 
@@ -11,7 +11,6 @@
         <strong><%= pin.user.email if pin.user %></strong>
         <% if pin.user == current_user %>
           <div class="actions">
-
             <%= link_to edit_pin_path(pin) do %>
               <span class="glyphicon glyphicon-edit"></span>
               Edit
